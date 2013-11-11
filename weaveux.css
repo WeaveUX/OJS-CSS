@@ -1,0 +1,759 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	background-color: #fff;
+	color: #333;
+	font-family: "helvetica neue", helvetica, arial, verdana, sans-serif;
+	line-height: 1;
+	text-align: left;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+	max-width: 100%;
+}
+a:link,
+a:visited,
+a:active { 
+	color: #00549d;
+}
+a:hover { 
+	background-color: #ddd;
+}
+a.action {
+	text-transform: none;
+}
+p {
+	line-height: 1.3em; 
+	margin: .5em 0;
+	margin-bottom: 1em;
+}
+.skip { 
+	text-indent: -9999em;
+}
+.hide,
+.hide-screen { 
+	display: none;
+}
+#container {
+	min-width: 0 !important;
+	text-align: left;
+}
+
+#content { 
+	font-size: 1em; 
+	border-top: none; 
+	padding-top: 0; 
+}
+#content ul {
+	list-style: disc;
+}
+#content ol {
+	list-style: decimal;
+}
+#content ul li,
+#content ol li {
+	margin-left: 1.8125em;
+	margin-bottom: .5em;
+	line-height: 1.2em;
+}
+#navbar { 
+	display: none !important;
+}
+#header {
+	background-color: #004875;
+	padding: 3em 0;
+	height: 8em;
+}
+#headerTitle {
+	text-align: left !important;
+	margin: 0;
+	font-size: 1em;
+	color: #fff;
+}
+#headerTitle h1 {
+	font-size: 3em;
+	width: 90%;
+	max-width: 11em;
+	margin: 0 auto;
+	padding: 0;
+}
+#headerTitle h1 span {
+	font-family: 'Julius Sans One', "helvetica neue", helvetica, arial, verdana, sans-serif;
+	text-transform: uppercase;
+}
+#headerTitle h1 span.subtitle
+{
+	font-family: "helvetica neue", helvetica, arial, verdana, sans-serif;
+	display: block;
+	font-size: .4em;
+	text-transform: none !important;
+}
+#headerTitle h1 p {
+	font-family: "helvetica neue", helvetica, arial, verdana, sans-serif;
+	display: block;
+	font-size: .3125em;
+	text-transform: none;
+}
+#main {
+	float: none;
+	width: 90%;
+	margin: 1.5em auto;
+	display: block;
+	padding: 0;
+	clear: both;
+}
+#main h2,
+#main h3,
+#main h4,
+#main h5 { 
+	margin: .5em 0; 
+	padding: 0; 
+	font-weight: bold; 
+	font-family: 'helvetica neue', helvetica, arial, verdana, sans-serif;
+}
+h2 { 
+	font-size: 1.5em !important;
+}
+h3 { 
+	font-size: 1.3125em !important; 
+}
+h4 { 
+	font-size: 1.25em !important;
+}
+h5 { 
+	font-size: 1.125em !important;
+}
+#rightSidebar {
+	float: none;
+	width: 90%;
+	margin: .4em auto 0;
+	font-size: 1em;
+	height: auto;
+	padding: 0;
+}
+#sidebar { 
+	clear: right; 
+}
+#sidebar div.block {
+	padding-bottom : 0;
+}
+#sidebar div.block span.blockTitle { 
+	display: none;
+}
+#sidebarUser { 
+	color: #fff;
+}
+#sidebarUser label { 
+	color: #575757; 
+	font-size: .9em;
+}
+#sidebarUser strong { 
+	color: #333; 
+	display: inline-block; 
+	float: left;
+}
+#sidebarUser strong:before { 
+	content: 'Hello, ';
+}
+#sidebarUser ul { 
+	color: #333; 
+	float: right; 
+	width: 65%; 
+	text-align: right;
+}
+#sidebarUser ul li { 
+	display: block; 
+	margin-bottom: .4em;
+}
+#sidebarUser table,
+#sidebarUser table tbody { 
+	display: block; 
+	width: 100%;
+}
+#sidebarUser table tbody tr { 
+	display: block; 
+	margin-right: 5%; 
+}
+#sidebarUser table tbody tr td { 
+	display: block;
+	margin-bottom: .75em;
+}
+#sidebarUser table tbody tr:nth-of-type(3) { 
+	display: none;
+}
+#sidebarUser input[type="submit"] { 
+	position: relative;
+	bottom: .3em;
+	margin-bottom: 0 !important;
+}
+#notes { 
+	font-size: .85em; 
+}
+#onlineSubmissions { 
+	margin-top: 1.4em;
+}
+#onlineSubmissions p:nth-of-type(3) {
+	font-size: .8125em;
+}
+#onlineSubmissions p a { 
+	display: block; 
+	text-align:center; 
+	margin-top: .6em;  
+}
+.footer {
+	border-top: 1px solid #dedede;
+	color: #aaa;
+	font-size: .9em;
+	margin: 1.5em auto;
+	padding: 1.2em 0;
+}
+.footer a {
+	color: #aaa;
+	text-decoration: none;
+}
+.footer ul li {
+	display: block;
+	line-height: 1.5em;
+	margin-left: 0 !important;
+}
+#authors table.data,
+#authors table.data tbody,
+#authors table.data td,
+#titleAndAbstract table.data,
+#titleAndAbstract table.data tbody,
+#titleAndAbstract table.data td,
+#indexing table.data,
+#indexing table.data tbody,
+#indexing table.data td,
+#submissionSupportingAgencies table.data,
+#submissionSupportingAgencies table.data tbody,
+#submissionSupportingAgencies table.data td,
+#submitForm table.data,
+#submitForm table.data tbody,
+#submitForm table.data td,
+#supplementaryFileData table.data,
+#supplementaryFileData table.data tbody,
+#supplementaryFileData table.data td {
+	display: inline;
+}
+table.listing,
+table.listing tbody,
+table.listing tr,
+table.listing td,
+table.info,
+table.info tbody,
+table.info tr,
+table.info td {
+	display: block;
+}
+table.listing tr.heading,
+table.listing tr td:first-child {
+	display: none;
+}
+table.listing td { 
+	padding: .25em .5% .75em; 
+}
+table.listing tr td[align="right"] {
+	text-align: left;
+}
+table.info { 
+	color: #fff;
+}
+table.info tbody tr td:first-child a { 
+	display: inline-block; 
+	margin-left: -.6em; 
+	font-size: 1.25em;
+}
+table.info tbody tr td:last-child { 
+	text-align:left;
+}
+table.info tbody tr td:last-child a {
+	margin-left: -.3em;
+}
+#authors table.data tr,
+#titleAndAbstract table.data tr,
+#indexing table.data tr,
+#submissionSupportingAgencies table.data tr,
+table.data td.value a.action { 
+	display: block;
+	clear: both;
+}
+table.data tbody tr td.label {
+	font-size: .85em;
+	line-height:1.4em;
+	margin-bottom: .6em;
+}
+table.data td { 
+	padding-left: .5em;
+	padding-bottom: .5em;
+}
+table.data td.value { 
+	width: 95%;
+}
+#authors table.data td,
+#titleAndAbstract table.data td,
+#indexing table.data td,
+#submissionSupportingAgencies table.data td,
+#supplementaryFileData table.data td {
+	padding-left: 0;
+	padding-right: 0;
+}
+#authors table.data tr:nth-child(9) {
+	display: none;
+}
+#checklist table.data td label { 
+	line-height: 1.2em;
+}
+#commentsForEditor table.data td.label { 
+	display: none;
+}
+#addSubmissionFile table, 
+#addSubmissionFile tr,
+#addSubmissionFile td {
+	display: block;
+}
+#addSubmissionFile table.data td {
+	width: 100%;
+}
+#submissionFile table.data td { 
+	width: 49%;
+}
+#addSubmissionFile table.data td.label label,
+#authors table.data td.label label,
+#titleAndAbstract table.data td.label label,
+#indexing table.data td.label label,
+#submissionSupportingAgencies table.data td.label label,
+#supplementaryFileData table.data td.label { 
+	font-weight: bold; 
+}
+#submissionFile table.data td.label { 
+	color: #575757; 
+	font-size: .85em;
+}
+#addSubmissionFile table.data td.value a.action,
+table.listing table.data td.value a.action { 
+	display: block; 
+}
+#table#showReviewers { 
+	font-size: .85em; 
+}
+#table#showReviewers td:first-child {
+	display: none;
+}
+#uploadInstructions { 
+	display: none;
+}
+form input[type="text"],
+form input[type="password"] { 
+	border: 1px solid #bbb; 
+	font-size: 1em; 
+	background-color: #fff; 
+	padding: .25em 1%; 
+	width: 96%;
+}
+select.selectMenu {
+	background-color: #fff;
+	border: 1px solid #bbb;
+	margin: 1em 0;
+}
+textarea.textArea {
+	background-color: #fff;
+	border: 1px solid #bbb;
+	width: 96%;
+	padding: .25em 1%;
+	margin-bottom: .5em;
+}
+textarea#authors-0-affiliation {
+	height: 2em;
+}
+#authors table.data td.value input,
+#titleAndAbstract table.data td.value input,
+#supplementaryFileData table.data td.value input { 
+	margin-bottom: .55em;
+}
+input.uploadField { 
+	background-color: #fff; 
+	border: none !important; 
+	width:65%;
+}
+form input.text {
+	font-size: 30px;
+	font-size: 1.8rem;
+	padding: 0.28em 1%;
+	width: 96%;
+}		
+.formRequired {
+	font-style: italic;
+}
+[name="uploadSuppFile"] { 
+	display: block; 
+	float: left; 
+}
+[name="submitUploadSuppFile"] { 
+	float: left; 
+	margin-left: 5%; 
+	position: relative; 
+	bottom: .25em;
+}
+ul.plain { 
+	list-style: none; 
+	padding: 0; 
+	color: #fff;
+}
+ul.plain li { 
+	padding: 0; 
+	margin: .3125em 0; 
+	margin-left: 0 !important;
+}
+ul#plugins {
+	color: #333;
+}
+ul.menu { 
+	list-style: none;
+}
+#notes ul,
+ul.filter {
+	list-style: none;
+	margin-top: .8em;
+}
+#notes ul li,
+ul.filter li,
+ul.menu li {
+	margin-left: 0;
+	display:block;
+}
+ul.menu a { 
+	text-transform: none;
+}
+ul.steplist li {
+	display: block;
+	text-transform: none;
+	line-height: 1.2em;
+	margin-left: 0 !important;
+	color: #777;
+}
+ul.steplist li.current {
+	color: #333;
+}
+#who ul { 
+	list-style: none !important;
+}
+#who ul li {
+	background-color: #eee;
+	font-size: .9em;
+	margin-right: 1%;
+	margin-top: 1.65em;
+	position: relative;
+	height: 11em;
+	overflow: hidden;
+	width: 100%;
+	margin-left: 0 !important;
+	margin-bottom: 0 !important;
+	line-height: auto !important;
+}
+#who ul li em {
+	display: block;
+	width: 10em;
+	overflow: hidden;
+	float: left;
+	padding-right: 1em;
+}
+#who a {
+	color: #333;
+	text-decoration: none;
+}
+#who ul li a.figcaption {
+	display:inline-block;
+	font-weight: bold;
+	padding: .5em 0;
+}
+#who ul li p {
+	padding: 0 5%;
+	color: #333;
+	line-height: 1.1em;
+	font-size: .8em;
+	margin-bottom: 0;
+}
+#who ul li p strong {
+	bottom: 0;
+	display: block;
+	margin-left: 12.6em;
+	margin-top: 1em;
+	padding: .5em 0;
+	position: absolute;
+	text-align: center;
+}
+#who ul li strong span {
+	display: block;
+}
+#onlineSubmissions p a,
+input.button,
+table.info tbody tr td:last-child a,
+#submitStart a.action,
+.button {
+	background:#eee;
+	border: 1px solid #aaa;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	-moz-border-radius:.25em;
+	-webkit-border-radius:.25em;
+	border-radius:.25em;
+	color: #444;
+	display: inline-block;
+	text-decoration:none;
+	cursor: pointer;
+	margin-bottom:1.25em;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding: .333em .75em;
+	font-size:1em;
+	line-height:1.3125em;
+}
+#helpContents, 
+#helpToc,
+#metaCitations { 
+	display: none;
+}
+.highlightCopyediting,
+.highlightLayoutEditing,
+.higlightProofreading {
+	padding: .4em;
+}
+.separator,
+#get-involved { 
+	clear: both; 
+}
+div.separator {
+	border-bottom: 1px solid #bbb;
+}
+span.instruct {
+	display: block;
+	font-size: .85em;
+	color: #575757;
+	line-height: 1.35em;
+	margin-bottom:1em;
+}
+#supplementaryFileData span.instruct {
+	margin-top: -1em;
+}
+#authors table.data tr td.value span.instruct {
+	margin-top: -.25em;
+}
+[for="uploadSuppFile"] {
+	display: block;
+	width: 100%;
+}
+span.instruct a {
+	display: block;
+}
+.mail-button input {
+	left: -1000em;
+	position: absolute;
+	width: 0;
+}
+.mail-button {
+	background-color: #0090D2;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(.2, #52a8e8), color-stop(1, #2e76cf));
+	background: -moz-linear-gradient(center top, #52a8e8 20%, #2e76cf 100%);
+	border: 1px solid #4081af; 
+	border-bottom-color: #20559a;
+	-webkit-border-radius: 4px; 
+	-moz-border-radius: 4px; 
+	border-radius: 4px; 
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29); 
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29); 
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29);
+	color: white;
+	display: inline-block;
+	font-weight:normal;
+	text-decoration:none;
+	cursor: pointer;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding:.85em 0;
+	font-size:1.2em;
+	line-height:1.2em; 
+	width: 99.5%;
+	text-align:center;
+	float:none;
+}
+
+@media screen and (min-width: 44.375em) {
+	#headerTitle h1 {
+		width: 70%;
+		font-size: 4em;
+	}
+	#headerTitle h1 p {
+		font-size: .25em;
+	}
+	#rightSidebar,
+	#main {
+		width: 70%;
+	}
+	#sidebarUser ul li { 
+		display: inline; 
+		margin-left: 5%;
+	}
+	#sidebar { 
+		border-bottom: 1px solid #ddd;
+		padding-bottom: .5em; 
+		margin-bottom: .5em;
+	}
+	#onlineSubmissions p { 
+		display: block;
+		width: 40%;
+		float: left;
+		margin-right:8%;
+		height: 8.5em;
+		position: relative;
+	}
+	#onlineSubmissions p:nth-of-type(3) {
+		width: 100%;
+		float: none;
+		clear: left;
+		height: auto;
+	}
+	#onlineSubmissions p a {
+		position: absolute;
+		bottom: 0;
+	}
+	.footer ul li {
+		display: inline;
+		padding-right: 0.4em;
+		margin-right: 0.5em;
+	}
+	.footer ul li:after {
+		color: #aaa;
+		content: "\2022";
+		margin: 0 -0.5em 0 0.7em;
+	}
+	.footer ul li:last-child:after {
+		content: "";
+		margin-right: 0;
+	}
+	ul.filter li {
+		display: inline;
+	}
+	#sidebarUser {
+		height: 2.5em;
+	}
+	#sidebarUser table tbody tr { 
+		float: left;
+	}
+	#sidebarUser table tbody tr td { 
+		display: inline-block;
+		margin-bottom: 0;
+	}
+	table.info td {
+		display: inline;
+		margin: 0 1%;
+	}
+	table.listing {
+		display: table;
+	}
+	table.listing tr.heading td {
+		text-transform: none;
+	}
+	table.listing tbody {
+		display: table-row-group;
+	}
+	table.listing tr,
+	table.listing tr.heading {
+		display: table-row;
+	}
+	table.listing td,
+	table.listing tr td:first-child  {
+		display: table-cell;
+	}
+	table.listing tr td[align="right"] {
+		text-align: right;
+	}
+	table.listing td.headseparator,
+	table.listing td.endseparator,
+	table.listing td.separator {
+		border-top: 1px solid #bbb; 
+	}
+	table.listing td.endseparator { 
+		margin-top: 1em;
+	}
+	#submissions span.disabled {
+		color: #666;
+		display: inline-block;
+		height: 0;
+		text-indent: -9999px;
+	}
+	#who ul li {
+		width: 48%;
+		float: left;
+	}
+	#signinForm { 
+		width: 60%; 
+	}
+}
+@media screen and (min-width: 50.625em) {
+	form input.text {
+		width: 58%;
+	}
+	.mail-button { 
+		float: right;
+		width:38%;
+	}
+}
+@media screen and (min-width: 62.85714285714286em) {
+	ul.steplist li {
+		display: inline;
+		line-height: 1.8em;
+	}
+	ul.menu li {
+		display: inline;
+	}
+	#who ul li {
+		height: 18.05555555555556em;
+		width: 19%;
+	}
+	#who ul li em {
+		height: 10.5em;
+		overflow: hidden;
+		float: none;
+	}
+	#who ul li a.figcaption {
+		padding: .5em 5%;
+	}
+	#who ul li p strong {
+		background-color: #004875;
+		color: #fff;
+		margin-left: -5%;
+		width: 100%;
+	}
+}
