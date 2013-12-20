@@ -62,6 +62,7 @@ p {
 }
 .skip { 
 	text-indent: -9999em;
+	height: 0;
 }
 .hide,
 .hide-screen { 
@@ -94,21 +95,22 @@ p {
 }
 #header {
 	background-color: #004875;
-	padding: 3em 0;
-	height: 8em;
+	padding: .75em 0;
+	height: 4em;
 }
 #headerTitle {
-	text-align: left !important;
 	margin: 0;
-	font-size: 1em;
+	font-size: 1.4em;
 	color: #fff;
+	text-align: center !important;
 }
 #headerTitle h1 {
-	font-size: 3em;
-	width: 90%;
-	max-width: 11em;
 	margin: 0 auto;
 	padding: 0;
+}
+#headerTitle h1 a {
+	color: #fff !important;
+	text-decoration: none;
 }
 #headerTitle h1 span {
 	font-family: 'Julius Sans One', "helvetica neue", helvetica, arial, verdana, sans-serif;
@@ -118,13 +120,11 @@ p {
 {
 	font-family: "helvetica neue", helvetica, arial, verdana, sans-serif;
 	display: block;
-	font-size: .4em;
 	text-transform: none !important;
 }
 #headerTitle h1 p {
 	font-family: "helvetica neue", helvetica, arial, verdana, sans-serif;
-	display: block;
-	font-size: .3125em;
+	display: none;
 	text-transform: none;
 }
 #main {
@@ -249,6 +249,9 @@ h5 {
 	line-height: 1.5em;
 	margin-left: 0 !important;
 }
+.footer-icon {
+	text-align: center;
+}
 #authors table.data,
 #authors table.data tbody,
 #authors table.data td,
@@ -266,7 +269,10 @@ h5 {
 #submitForm table.data td,
 #supplementaryFileData table.data,
 #supplementaryFileData table.data tbody,
-#supplementaryFileData table.data td {
+#supplementaryFileData table.data td,
+#register table.data,
+#register table.data tbody,
+#register table.data td {
 	display: inline;
 }
 table.listing,
@@ -307,7 +313,8 @@ table.info tbody tr td:last-child a {
 #titleAndAbstract table.data tr,
 #indexing table.data tr,
 #submissionSupportingAgencies table.data tr,
-table.data td.value a.action { 
+table.data td.value a.action,
+#register table.data tr { 
 	display: block;
 	clear: both;
 }
@@ -327,7 +334,8 @@ table.data td.value {
 #titleAndAbstract table.data td,
 #indexing table.data td,
 #submissionSupportingAgencies table.data td,
-#supplementaryFileData table.data td {
+#supplementaryFileData table.data td,
+#register table.data td {
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -356,13 +364,56 @@ table.data td.value {
 #titleAndAbstract table.data td.label label,
 #indexing table.data td.label label,
 #submissionSupportingAgencies table.data td.label label,
-#supplementaryFileData table.data td.label { 
+#supplementaryFileData table.data td.label,
+#register table.data td.label label { 
 	font-weight: bold; 
 }
 #submissionFile table.data td.label { 
 	color: #575757; 
 	font-size: .85em;
 }
+#register table.data td.instruct {
+	font-size: .8125em;
+	display: inline-block;
+}
+#register table.data td.value {
+	font-size: .8125em;
+}
+#register table.data td.value input,
+#register table.data td.value textarea,
+#register table.data td.value select {
+	font-size: 1.1em;
+}
+#register table.data tr:last-child td.label {
+display: block;
+margin-top: 1em;
+}
+#register table.data tr:last-child td.label label:after {
+	content: ":";
+}
+#register table.data tr:last-child td.value label {
+	font-weight: bold;
+}
+#register table.data tr:last-child td.value label.desc {
+	font-weight: normal;
+	font-size: .8125em;
+	margin-top: .75em;
+	display: inline-block;
+	color: #575757;
+}
+#register table.data a.action {
+	margin: .75em 0;
+}
+#register table.data tr:nth-child(13),
+#register table.data tr:nth-child(17),
+#register table.data tr:nth-child(18),
+#register table.data tr:nth-child(6) {
+	display: none;
+}
+#register table.data tr:nth-child(12) textarea {
+	height: 3.5em;
+}
+
 #addSubmissionFile table.data td.value a.action,
 table.listing table.data td.value a.action { 
 	display: block; 
@@ -608,13 +659,41 @@ span.instruct a {
 	text-align:center;
 	float:none;
 }
+a.mail-button:hover {
+	background-color: #0090D2;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(.2, #52a8e8), color-stop(1, #2e76cf));
+	background: -moz-linear-gradient(center top, #52a8e8 20%, #2e76cf 100%);
+}
+
+#login-trigger {
+	text-align: right;
+	color: #069;
+	text-decoration: underline;
+	cursor: pointer;
+	margin: .65em 0;
+}
 
 @media screen and (min-width: 44.375em) {
+	#header {
+		padding: 3em 0;
+		height: 8em;
+		text-align: left;
+	}
+	#headerTitle {
+		font-size: 1em;
+		text-align: left !important;
+	}
 	#headerTitle h1 {
 		width: 70%;
 		font-size: 4em;
+		max-width: 11em;
+	}
+	#headerTitle h1 span.subtitle
+	{
+		font-size: .4em;
 	}
 	#headerTitle h1 p {
+		display: block;
 		font-size: .25em;
 	}
 	#rightSidebar,
@@ -650,6 +729,7 @@ span.instruct a {
 	}
 	.footer ul li {
 		display: inline;
+		line-height: .8125em;
 		padding-right: 0.4em;
 		margin-right: 0.5em;
 	}
@@ -661,6 +741,15 @@ span.instruct a {
 	.footer ul li:last-child:after {
 		content: "";
 		margin-right: 0;
+	}
+	.footer-icon {
+		width: 10%;
+		float: right;
+	}
+	.footer-text {
+		width: 88%;
+		float: left;
+		margin-top: .6125em;
 	}
 	ul.filter li {
 		display: inline;

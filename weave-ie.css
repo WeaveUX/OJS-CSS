@@ -1,0 +1,154 @@
+#header {
+	padding: 3em 0;
+	height: 8em;
+	text-align: left;
+}
+#headerTitle {
+	font-size: 1em;
+	text-align: left !important;
+}
+#headerTitle h1 {
+	width: 70%;
+	font-size: 4em;
+	max-width: 11em;
+}
+#headerTitle h1 span.subtitle
+{
+	font-size: .4em;
+}
+#headerTitle h1 p {
+	display: block;
+	font-size: .25em;
+}
+#rightSidebar,
+#main {
+	width: 70%;
+}
+#sidebarUser ul li { 
+	display: inline; 
+	margin-left: 5%;
+}
+#sidebar { 
+	border-bottom: 1px solid #ddd;
+	padding-bottom: .5em; 
+	margin-bottom: .5em;
+}
+#onlineSubmissions p { 
+	display: block;
+	width: 40%;
+	float: left;
+	margin-right:8%;
+	height: 8.5em;
+	position: relative;
+}
+#onlineSubmissions p:nth-of-type(3) {
+	width: 100%;
+	float: none;
+	clear: left;
+	height: auto;
+}
+#onlineSubmissions p a {
+	position: absolute;
+	bottom: 0;
+}
+.footer ul li {
+	display: inline;
+	padding-right: 0.4em;
+	margin-right: 0.5em;
+}
+.footer ul li:after {
+	color: #aaa;
+	content: "\2022";
+	margin: 0 -0.5em 0 0.7em;
+}
+.footer ul li:last-child:after {
+	content: "";
+	margin-right: 0;
+}
+ul.filter li {
+	display: inline;
+}
+#sidebarUser form {
+	height: 2.5em;
+}
+#sidebarUser table tbody tr { 
+	float: left;
+}
+#sidebarUser table tbody tr td { 
+	display: inline-block;
+	margin-bottom: 0;
+}
+table.info td {
+	display: inline;
+	margin: 0 1%;
+}
+table.listing {
+	display: table;
+}
+table.listing tr.heading td {
+	text-transform: none;
+}
+table.listing tbody {
+	display: table-row-group;
+}
+table.listing tr,
+table.listing tr.heading {
+	display: table-row;
+}
+table.listing td,
+table.listing tr td:first-child  {
+	display: table-cell;
+}
+table.listing tr td[align="right"] {
+	text-align: right;
+}
+table.listing td.headseparator,
+table.listing td.endseparator,
+table.listing td.separator {
+	border-top: 1px solid #bbb; 
+}
+table.listing td.endseparator { 
+	margin-top: 1em;
+}
+#submissions span.disabled {
+	color: #666;
+	display: inline-block;
+	height: 0;
+	text-indent: -9999px;
+}
+#signinForm { 
+	width: 60%; 
+}
+form input.text {
+	width: 58%;
+}
+.mail-button { 
+	float: right;
+	width:38%;
+}
+ul.steplist li {
+	display: inline;
+	line-height: 1.8em;
+}
+ul.menu li {
+	display: inline;
+}
+#who ul li {
+	height: 18.05555555555556em;
+	width: 18%;
+	float: left;
+}
+#who ul li em {
+	height: 10.5em;
+	overflow: hidden;
+	float: none;
+}
+#who ul li a.figcaption {
+	padding: .5em 5%;
+}
+#who ul li p strong {
+	background-color: #004875;
+	color: #fff;
+	margin-left: -5%;
+	width: 100%;
+}
